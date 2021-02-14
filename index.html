@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/weather.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+   
+
+
+
+    <title>Task Manager</title>
+
+</head>
+
+<body>
+
+
+    <!-- start sidenavbar -->
+    <div class="navbar">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <main id="main-content">
+            <label for="checkbox" class="check-box">
+                <span class="line line1"></span>
+                <span class="line line3"></span>
+                <span class="line line2"></span>
+            </label>
+        </main>
+
+        <aside id="sidebar">
+            <header class="navbar-header">
+                <a href="" class="logo" id="Activeusername"></a>
+
+            </header>
+
+            <main class="navbar-body">
+                <ul>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link"> HOME </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./profile.html" class="nav-link">UPDATE PROFILE </a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="signout()"> SIGN OUT </a>
+                    </li>
+
+
+
+                </ul>
+            </main>
+        </aside>
+
+
+
+    </div>
+
+
+    <!-- end sitenavbar -->
+
+
+
+
+
+
+    <!-- task managment  -->
+
+    <div class="task-managment">
+        <header>
+            <h1>TASK MANAGER</h1>
+        </header>
+
+
+
+
+        <form>
+            <input type="text" class="todo_input" />
+            <button class="todo_button" type="submit">
+                <img src="./img/add.png" class="todo_button"> </button>
+
+            <div class="select">
+                <select name="todos" class="filter_todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+
+        </form>
+
+
+
+        <div class="todo_container">
+            <ul class="todo_list"></ul>
+        </div>
+
+    </div>
+
+
+    <!-- Geo location weather -->
+
+    <div class="Geo-location-weather">
+        <iframe class="card" id="myImg" class="myImg"> </iframe>
+        <h2 id="temperature"></h2>
+        <h3 id="description"></h3>
+        <h1 id="location"></h1>
+
+
+    </div>
+
+    <div class="time">
+        <h1 id="time"></h1>
+    </div>
+
+
+
+
+
+
+
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/currenttime.js"></script>
+    <script src="./js/gif.js"></script>
+    <script src="./js/signout.js"></script>
+
+
+</body>
+
+</html>

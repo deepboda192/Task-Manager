@@ -1,0 +1,24 @@
+.Geo-location-weather{
+    text-align: right; 
+     
+    padding: 1rem; 
+    background-color:transparent; 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.card{
+    border: none;
+    position: fixed;
+    bottom: 150px;
+    right: -100px;
+    
+    
+}
+
+.time{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+}

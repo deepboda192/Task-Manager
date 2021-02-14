@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="form" id="Registration" name="registrationform">
+            <h1 class="form_title">USER PROFILE</h1>
+
+
+            <!-- name  -->
+            <div class="form_input_group">
+
+                <input type="text" class="form_input" id="profile-name" autofocus placeholder="Name" required>
+                <div class="form_input_error"></div>
+            </div>
+
+            <!-- Email  -->
+            <div class="form_input_group">
+                <input type="text" class="form_input" id="profile-email" autofocus placeholder="Email" required>
+                <div class="form_input_error"></div>
+            </div>
+
+            <!-- Mobile No.  -->
+            <div class="form_input_group">
+                <input type="text" class="form_input" id="profile-mobile" autofocus placeholder="Mobile No." required>
+                <div class="form_input_error"></div>
+            </div>
+
+
+            <!-- password  -->
+            <div class="form_input_group">
+                <input type="text" class="form_input" id="profile-password" autofocus placeholder="Password"
+                    autocomplete="on" required>
+                <div class="form_input_error"></div>
+            </div>
+
+            <!-- Update  -->
+            <button class="form_button" type="button" onclick="updateValues()">Update</button>
+
+
+            <p class="form_text">
+                <a class="form_link" href="index.html">Go to Home -></a>
+            </p>
+
+
+
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+<script src="./js/profile.js"></script>
+
+
+
+</html>

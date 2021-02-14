@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #02705c;
+  background-image: linear-gradient(120deg, #6ed8c6, #02705c);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+header,
+form {
+  display: flex;
+  min-height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.4rem;
+  border: none;
+  font-size: 2.2rem;
+  background: white;
+  color: #5c5c5c;
+  border-radius: 1px;
+}
+form button {
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #05bd9b9c;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #5c5c5c;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  color: #02705c;
+  top: 15px;
+  right: 10px;
+  pointer-events: none;
+}
+.select:hover::after {
+  color: #05e2ba;
+}
+
+/* start css for task list  */
+.todo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo_list {
+  width: 500px;
+  list-style: none;
+}
+
+.todo {
+  background: rgb(250, 250, 250);
+  color: #000000;
+  display: flex;
+  font-size: x-large;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  margin-bottom: 17px;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.todo li {
+  flex: 0;
+}
+
+/* end css for task list  */
+
+/* start complete delete button */
+
+.input_display {
+  text-decoration: none;
+  border: none;
+  font-size: x-large;
+  color: rgb(61, 61, 61);
+  font-family: sans-serif;
+  width: 410px;
+  background-color: transparent;
+}
+
+.complete_btn,
+.delete_btn,
+.edit_btn {
+  display: inline-block;
+  padding: 0.5rem;
+  background: transparent;
+  color: transparent;
+  border: none;
+  margin-left: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 40px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  border-color: transparent;
+  background-repeat: no-repeat;
+  border-color: transparent;
+  height: 36px;
+  width: 36px;
+  margin-right: 8px;
+}
+
+.complete_btn {
+  background-image: url(../img/complete.png);
+}
+.delete_btn {
+  background-image: url(../img/delete.png);
+}
+
+.edit_btn {
+  background-image: url(../img/edit.png);
+}
+
+.editdone_btn {
+  background-image: url(../img/editdone.png);
+}
+
+.edit_mode {
+  border: 1px #02705c solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.complete_btn:active {
+  background: #08cfab;
+}
+
+.delete_btn:active {
+  background: #e95541;
+}
+
+.edit_btn:active {
+  background: rgb(30, 187, 235);
+}
+
+.editdone_btn:active {
+  background: rgb(104, 221, 104);
+}
+
+/* end complete delete button */
+
+/* start animation for complete and delete button */
+.completedItem {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transform: scale(0.96);
+}
+
+.fall {
+  transform: translateY(4rem) scale(0.4) rotateZ(20deg);
+  opacity: 0;
+}
+
+/* end animation for complete and delete button */
+
+/* navsidebar css */
+
+.navbar {
+  float: left;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#sidebar {
+  background-color: #ffffff;
+  width: 220px;
+  height: 660px;
+  visibility: visible;
+  opacity: 1;
+  color: rgb(56, 56, 56);
+}
+
+#sidebar .navbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #5c5c5c;
+}
+
+#sidebar .navbar-header .brand-logo {
+  font-size: 10em;
+}
+
+.nav-link {
+  display: block;
+}
+
+.navbar-body .nav-item {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.navbar-body .nav-item:hover {
+  background-color: #03ad8e;
+}
+
+#main-content {
+  padding: 30px 20px;
+}
+
+#main-content .check-box {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#main-content .check-box .line {
+  width: 25px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  display: block;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ #sidebar {
+  width: 0%;
+}
+
+#checkbox:checked ~ #sidebar .nav-item {
+  visibility: hidden;
+}
+
+#checkbox:checked ~ #sidebar .logo {
+  visibility: hidden;
+}
+
+#checkbox:checked ~ #sidebar .navbar-header {
+  visibility: hidden;
+}
